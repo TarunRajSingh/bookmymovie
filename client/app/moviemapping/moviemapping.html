@@ -1,0 +1,83 @@
+<div class="container">
+  <table class="table">
+    <tr>
+      <td>Choose Movie</td>
+      <td>Choose Location</td>
+    </tr>
+    <tr>
+      <td>
+        <select class="form-control" name="MovieName" ng-model="moviemappingCtrl.Title" id="MovieName" ng-disabled="moviemappingCtrl.MovieNameActive">
+          <option ng-repeat="x in moviemappingCtrl.MovieDetails ">{{x.Title}}</option>
+        </select>
+      </td>
+      <td>
+        <select class="form-control" name="City" ng-model="moviemappingCtrl.City" ng-disabled="moviemappingCtrl.CityNameActive">
+          <option ng-repeat="x in moviemappingCtrl.TheatreDetails|orderBy:'City'|unique:'City'">{{x.City}}</option>
+        </select>
+      </td>
+      <td>
+        <button class="btn btn-success" type="button" name="singlemapping" ng-click="moviemappingCtrl.StartMapping()">Map</button>
+      </td>
+    </tr>
+  </table>
+
+  <div ng-click="moviemappingCtrl.ChooseTheatre()" class="TheatrePills" ng-show="moviemappingCtrl.SelectTheatreActive">
+    <h3>Select Theatre</h3>
+    <ul id="ChooseTheatre" class="nav nav-pills nav-justified TheatrePills">
+      <li class="TheatrePills" ng-repeat="x in moviemappingCtrl.TheatreDetails|filter:moviemappingCtrl.City" ><a href="#">{{x.Theatre}}</a></li>
+    </ul>
+  </div>
+
+  <div id="ChooseDate" ng-click="moviemappingCtrl.ChooseDate()" class="DatePills" ng-show="moviemappingCtrl.SelectDateActive">
+    <h3>Select Dates</h3>
+    <ul  id="ChooseDate" class="nav nav-pills nav-justified DatePills">
+      <li id="ChooseDate" class="DatePills" ng-repeat="date in moviemappingCtrl.MovieDates"><a href="#" class="DatePills"><span class="glyphicon glyphicon-calendar DatePills"></span><div class="DatePills" id="ChooseDate">{{date | date:'dd MMM yy'}}</div></a></li>
+    </ul>
+  </div>
+
+  <div class="TimeSelectionMenu form-horizontal" ng-show="moviemappingCtrl.SelectTimeActive">
+    <h3>Select Time</h3>
+
+    <div class="form-group">
+
+      <div class="col-sm-2">
+        <select class="form-control" id="Hours">
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+
+      <div class="col-sm-2" id="Mins">
+        <select class="form-control" name="">
+          <option value="00">00</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+        </select>
+      </div>
+
+      <div class="col-sm-2" id="AMPM">
+        <select class="form-control">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+      </div>
+
+      <button class="btn btn-success" ng-click="moviemappingCtrl.AddTime()">Add Time <span class="glyphicon glyphicon-chevron-right"></span></button>
+      <div id="TimeSelectionMenuContent" class="nav navbar-nav col-sm-12" ></div>
+    </div>
+    <button class="btn btn-success col-sm-6 col-sm-offset-3" ng-click="moviemappingCtrl.MapMovie()">MapMovie <i class="glyphicon glyphicon-save"></i></button>
+  </div>
+</div>

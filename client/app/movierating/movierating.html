@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-sm-3 image-item-content" id="image-item-content" ng-repeat="x in movieratingCtrl.movie|unique:'MovieToMap'">
+    <img src="{{x.PosterToMap}}" alt="Movie Image" class="containerforimage" id="containerforimage">
+    <button class="item-book btn btn-default btn-block" id="BookNow" ng-click="$ctrl.BookNow(x)" data-toggle="modal" data-target="#myModal">
+        <div >
+          <strong>{{x.MovieName}}</strong>
+        </div>
+        <div>
+          <strong>Rate</strong>
+        </div>
+    </button>
+  </div>
+</div>

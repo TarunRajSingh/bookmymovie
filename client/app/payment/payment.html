@@ -1,0 +1,130 @@
+<div class="container">
+  <div class="col-sm-7">
+    <div class="panel panel-default credit-card-box">
+      <div class="panel-heading">
+        <div class="row">
+          <form class="form-group" method="post">
+            <label class="col-sm-6">Payment Details</label>
+            <label class="col-sm-6"><img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png"></label>
+          </form>
+        </div>
+      </div>
+      <div class="panel-body">
+        <form class="form-group" method="post">
+          <label >NAME ON CARD</label>
+          <input ng-model="NameOnCard" id="nameoncard" name="nameoncard" class="form-control" placeholder="NAME ON CARD" pattern=".{3,40}"></input>
+        </form>
+        <form class="form-group" method="post">
+          <label ng-model="CardNumber">CARD NUMBER</label>
+          <input id="cardnumber" type=" " name="cardnumber" class="form-control" placeholder="16 DIGIT CARD NUMBER" minlength="15" maxlength="16"></input>
+        </form>
+        <div class="row">
+          <div class="col-sm-6">
+            <form class="form-group">
+              <label class="control-label" for="expdate">EXP DATE</label>
+              <div class="row">
+                <div class="col-xm-6 col-md-6 form-group">
+                  <!-- <input class="form-control" id="mm" placeholder="MM" type="text" minlength="2" maxlength="2"/> -->
+                  <select class="form-group form-control" name="Month" ng-model="Month">
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                </div>
+                <div class="col-sm-6 col-md-6 form-group">
+                  <select class="form-group form-control" name="Month" ng-model="Year">
+                    <option value="2017">2017</option>
+                    <option value="2017">2018</option>
+                    <option value="2017">2019</option>
+                    <option value="2017">2020</option>
+                    <option value="2017">2021</option>
+                    <option value="2017">2022</option>
+                    <option value="2017">2023</option>
+                    <option value="2017">2024</option>
+                    <option value="2017">2025</option>
+                    <option value="2017">2026</option>
+                    <option value="2017">2027</option>
+                  </select>
+                </div>
+                </div>
+            </form>
+          </div>
+          <div class="col-sm-6">
+            <form class="form-group">
+              <label class="control-label" for="cvvnumber">CVV NUMBER</label>
+              <input ng-model="CVV" type="password" class="form-control" for="cvvnumber" id="cvv" placeholder="CVV" minlength="3" maxlength="4" ng-model="cvvnumber"></input>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <form class="form-group">
+              <label class="control-label" for="promocode">EMAIL</label>
+              <input ng-model="Email" class="form-control" for="promocode" placeholder="EMAIL" id="email"></input>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <form class="form-group">
+              <label class="control-label" for="promocode">PROMO CODE</label>
+              <input class="form-control" for="promocode" placeholder="PROMO CODE" id="promomcode"></input>
+            </form>
+          </div>
+        </div>
+        <div class="form-group">
+          <button id="register" value="Register" disabled="disabled" class="btn btn-success form-control" type="button" name="submit" ng-click="paymentCtrl.ProceedToConfirm()">SUBMIT</button>
+        </div>
+        <!-- <div class="form-group">
+          <button class="btn btn-danger form-control" type="button" name="cancel">CANCEL</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-5">
+    <div class="col-sm-6">
+      <img id="Poster" width=200px; height=300px;>
+    </div>
+    <div class="col-sm-6">
+      <table class="table table-bordered">
+        <tr>
+          <td class="text-center written" id="MovieName"></td>
+        </tr>
+        <tr>
+          <td class="text-center written" id="Theatre"></td>
+        </tr>
+        <tr>
+          <td class="text-center written" id="Date"></td>
+        </tr>
+        <tr>
+          <td class="text-center written" id="Time"></td>
+        </tr>
+        <tr>
+          <td class="text-center written" id="seat"></td>
+        </tr>
+        <tr>
+          <td class="text-center written" id="price"></td>
+        </tr>
+        <tr>
+          <td class="text-center written" id="tax"></td>
+        </tr>
+        <tr>
+          <td class="text-center written" id="total"></td>
+        </tr>
+        <tr>
+          <td id="ipadd"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

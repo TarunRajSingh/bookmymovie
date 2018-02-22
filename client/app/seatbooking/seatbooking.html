@@ -1,0 +1,314 @@
+<!-- <script type="text/javascript">
+// var bookedSeats=[];
+window.disableSeats=function(){
+      this.MovieTitle= sessionStorage.getItem('MovieName');
+      this.CityName= sessionStorage.getItem('CityName');
+      this.TheatreName=sessionStorage.getItem('Theatre');
+      // this.Class=sessionStorage.getItem('Class');
+      this.Date=sessionStorage.getItem('Date');
+      this.ShowTime=sessionStorage.getItem('ShowTime');
+      for(var a=0;a<this.bookedSeats.length;a++){
+        for(var b=0;b<this.bookedSeats[a].Seat.length;b++){
+          var id=window.bookedSeats[a].Seat[b];
+            if((this.MovieTitle==bookedSeats[a].MovieName)&&(this.CityName==bookedSeats[a].CityName)&&(this.TheatreName==bookedSeats[a].TheatreName)&&(this.MovieDate==bookedSeats[a].MovieDate)&&(this.ShowTime==bookedSeats[a].ShowTime))
+          $('#'+id).attr('src','assets/Images/R_chair.png');
+        }
+      }
+    }
+</script> -->
+<div>
+  <div class="col-sm-8 seatcontainer">
+    <div class="col-sm-12">
+        <div class="row">
+          <span>Seat</span>
+          <div class="btn-group">
+            <button type="button" name="button" class="btn btn-default btn-sm buttonforseat" id="1" value='1'>1</button>
+            <button type="button" name="button" class="btn btn-default btn-sm buttonforseat" id="2" value='2'>2</button>
+            <button type="button" name="button" class="btn btn-default btn-sm buttonforseat" id="3" value='3'>3</button>
+            <button type="button" name="button" class="btn btn-default btn-sm buttonforseat" id="4" value='4'>4</button>
+            <button type="button" name="button" class="btn btn-default btn-sm buttonforseat" id="5" value='5'>5</button>
+            <button type="button" name="button" class="btn btn-default btn-sm buttonforseat" id="6" value='6'>6</button>
+            <button type="button" name="button" class="btn btn-default btn-sm buttonforseat" id="7" value='7'>7</button>
+            <button type="button" name="button" class="btn btn-default btn-sm buttonforseat" id="8" value='8'>8</button>
+            <button type="button" name="button" class="btn btn-default btn-sm buttonforseat" id="9" value='9'>9</button>
+            <button type="button" name="button" class="btn btn-default btn-sm buttonforseat" id="10" value='10'>10</button>
+          </div>
+          <span>Want to change seats?</span>
+        </div>
+    </div>
+    <br></br>
+    <div class="row">
+      <div class="col-sm-6" style="padding-left:220px;">
+        <img style="height:40px;" src="assets\images\eyesthisway.png" alt="abc">
+      </div>
+    </div>
+    <br></br>
+    <div class="row1" title="SILVER">
+      <p class="rownumber">A</p>
+      <div class="silver">
+        <div class="btn seat pwd1" id="A1" ng-click="seatbookingCtrl.wheelchairseat()"><i class="fa fa-wheelchair"></i></div>
+        <div class="btn seat pwd1" id="A2" ng-click="seatbookingCtrl.wheelchairseat()"><i class="fa fa-wheelchair"></i></div>
+        <div class="btn seat silver1" id="A3">3</div>
+        <div class="btn seat silver1" id="A4">4</div>
+        <div class="btn seat silver1" id="A5">5</div>
+        <div class="btn seat silver1" id="A6">6</div>
+        <div class="btn seat silver1" id="A7">7</div>
+        <div class="btn seat silver1" id="A8">8</div>
+        <div class="btn seat pwd1" id="A9" ng-click="seatbookingCtrl.wheelchairseat()"><i class="fa fa-wheelchair"></i></div>
+        <div class="btn seat pwd1" id="A10" ng-click="seatbookingCtrl.wheelchairseat()"><i class="fa fa-wheelchair"></i></div>
+      </div>
+    </div>
+    <div class="row1" title="SILVER">
+      <p class="rownumber">B</p>
+      <div class="silver">
+        <div class="btn seat silver1" id="B1">1</div>
+        <div class="btn seat silver1" id="B2">2</div>
+        <div class="btn seat silver1" id="B3">3</div>
+        <div class="btn seat silver1" id="B4">4</div>
+        <div class="btn seat silver1" id="B5">5</div>
+        <div class="btn seat silver1" id="B6">6</div>
+        <div class="btn seat silver1" id="B7">7</div>
+        <div class="btn seat silver1" id="B8">8</div>
+        <div class="btn seat silver1" id="B9">9</div>
+        <div class="btn seat silver1" id="B10">10</div>
+      </div>
+    </div>
+    <div class="row1" title="SILVER">
+      <p class="rownumber">C</p>
+      <div class="silver">
+        <div class="btn seat silver1" id="C1">1</div>
+        <div class="btn seat silver1" id="C2">2</div>
+        <div class="btn seat silver1" id="C3">3</div>
+        <div class="btn seat silver1" id="C4">4</div>
+        <div class="btn seat silver1" id="C5">5</div>
+        <div class="btn seat silver1" id="C6">6</div>
+        <div class="btn seat silver1" id="C7">7</div>
+        <div class="btn seat silver1" id="C8">8</div>
+        <div class="btn seat silver1" id="C9">9</div>
+        <div class="btn seat silver1" id="C10">10</div>
+      </div>
+    </div>
+    <div class="row1" title="SILVER">
+      <p class="rownumber">D</p>
+      <div class="silver">
+        <div class="btn seat silver1" id="D1">1</div>
+        <div class="btn seat silver1" id="D2">2</div>
+        <div class="btn seat silver1" id="D3">3</div>
+        <div class="btn seat silver1" id="D4">4</div>
+        <div class="btn seat silver1" id="D5">5</div>
+        <div class="btn seat silver1" id="D6">6</div>
+        <div class="btn seat silver1" id="D7">7</div>
+        <div class="btn seat silver1" id="D8">8</div>
+        <div class="btn seat silver1" id="D9">9</div>
+        <div class="btn seat silver1" id="D10">10</div>
+      </div>
+    </div>
+    <div class="row1" title="SILVER">
+      <p class="rownumber">E</p>
+      <div class="silver">
+        <div class="btn seat silver1" id="E1">1</div>
+        <div class="btn seat silver1" id="E2">2</div>
+        <div class="btn seat silver1" id="E3">3</div>
+        <div class="btn seat silver1" id="E4">4</div>
+        <div class="btn seat silver1" id="E5">5</div>
+        <div class="btn seat silver1" id="E6">6</div>
+        <div class="btn seat silver1" id="E7">7</div>
+        <div class="btn seat silver1" id="E8">8</div>
+        <div class="btn seat silver1" id="E9">9</div>
+        <div class="btn seat silver1" id="E10">10</div>
+      </div>
+    </div>
+    <div class="row1" title="SILVER">
+      <p class="rownumber">F</p>
+      <div class="silver">
+        <div class="btn seat silver1" id="F1">1</div>
+        <div class="btn seat silver1" id="F2">2</div>
+        <div class="btn seat silver1" id="F3">3</div>
+        <div class="btn seat silver1" id="F4">4</div>
+        <div class="btn seat silver1" id="F5">5</div>
+        <div class="btn seat silver1" id="F6">6</div>
+        <div class="btn seat silver1" id="F7">7</div>
+        <div class="btn seat silver1" id="F8">8</div>
+        <div class="btn seat silver1" id="F9">9</div>
+        <div class="btn seat silver1" id="F10">10</div>
+      </div>
+    </div>
+    <div class="row1" title="SILVER">
+      <p class="rownumber">G</p>
+      <div class="silver">
+        <div class="btn seat silver1" id="G1">1</div>
+        <div class="btn seat silver1" id="G2">2</div>
+        <div class="btn seat silver1" id="G3">3</div>
+        <div class="btn seat silver1" id="G4">4</div>
+        <div class="btn seat silver1" id="G5">5</div>
+        <div class="btn seat silver1" id="G6">6</div>
+        <div class="btn seat silver1" id="G7">7</div>
+        <div class="btn seat silver1" id="G8">8</div>
+        <div class="btn seat silver1" id="G9">9</div>
+        <div class="btn seat silver1" id="G10">10</div>
+      </div>
+    </div>
+    <div class="row1"></div>
+    <div class="row1" title="GOLD">
+      <p class="rownumber">H</p>
+      <div class="goldfront">
+        <div class="btn seat pwd2" id="H1" ng-click="seatbookingCtrl.wheelchairseat()"><i class="fa fa-wheelchair"></i></div>
+        <div class="btn seat pwd2" id="H2" ng-click="seatbookingCtrl.wheelchairseat()"><i class="fa fa-wheelchair"></i></div>
+        <div class="btn seat gold1" id="H3">3</div>
+        <div class="btn seat gold1" id="H4">4</div>
+        <div class="btn seat gold1" id="H5">5</div>
+        <div class="btn seat gold1" id="H6">6</div>
+        <div class="btn seat gold1" id="H7">7</div>
+        <div class="btn seat gold1" id="H8">8</div>
+        <div class="btn seat pwd2" id="H9" ng-click="seatbookingCtrl.wheelchairseat()"><i class="fa fa-wheelchair"></i></div>
+        <div class="btn seat pwd2" id="H10" ng-click="seatbookingCtrl.wheelchairseat()"><i class="fa fa-wheelchair"></i></div>
+      </div>
+    </div>
+    <div class="row1">
+      <p class="rownumber">I</p>
+      <div class="platinum" title="PLATINUM">
+        <div class="btn seat platinum1" id="I1">1</div>
+        <div class="btn seat platinum1" id="I2">2</div>
+        <div class="btn seat platinum1" id="I3">3</div>
+      </div>
+      <div class="gold"  title="GOLD">
+        <div class="btn seat gold1" id="I4">4</div>
+        <div class="btn seat gold1" id="I5">5</div>
+        <div class="btn seat gold1" id="I6">6</div>
+        <div class="btn seat gold1" id="I7">7</div>
+        <div class="btn seat gold1" id="I8">8</div>
+        <div class="btn seat gold1" id="I9">9</div>
+        <div class="btn seat gold1" id="I10">10</div>
+        <div class="btn seat gold1" id="I11">11</div>
+        <div class="btn seat gold1" id="I12">12</div>
+        <div class="btn seat gold1" id="I13">13</div>
+      </div>
+      <div class="platinum" title="PLATINUM">
+        <div class="btn seat platinum1" id="I14">14</div>
+        <div class="btn seat platinum1" id="I15">15</div>
+        <div class="btn seat platinum1" id="I16">16</div>
+      </div>
+    </div>
+    <div class="row1">
+      <p class="rownumber">J</p>
+      <div class="platinum" title="PLATINUM">
+        <div class="btn seat platinum1" id="J1">1</div>
+        <div class="btn seat platinum1" id="J2">2</div>
+        <div class="btn seat platinum1" id="J3">3</div>
+      </div>
+      <div class="gold" title="GOLD">
+        <div class="btn seat gold1" id="J4">4</div>
+        <div class="btn seat gold1" id="J5">5</div>
+        <div class="btn seat gold1" id="J6">6</div>
+        <div class="btn seat gold1" id="J7">7</div>
+        <div class="btn seat gold1" id="J8">8</div>
+        <div class="btn seat gold1" id="J9">9</div>
+        <div class="btn seat gold1" id="J10">10</div>
+        <div class="btn seat gold1" id="J11">11</div>
+        <div class="btn seat gold1" id="J12">12</div>
+        <div class="btn seat gold1" id="J13">13</div>
+      </div>
+      <div class="platinum" title="PLATINUM">
+        <div class="btn seat platinum1" id="J14">14</div>
+        <div class="btn seat platinum1" id="J15">15</div>
+        <div class="btn seat platinum1" id="J16">16</div>
+      </div>
+    </div>
+    <div class="row1">
+      <p class="rownumber">K</p>
+      <div class="platinum" title="PLATINUM">
+        <div class="btn seat platinum1" id="K1">1</div>
+        <div class="btn seat platinum1" id="K2">2</div>
+        <div class="btn seat platinum1" id="K3">3</div>
+      </div>
+      <div class="gold" title="GOLD">
+        <div class="btn seat gold1" id="K4">4</div>
+        <div class="btn seat gold1" id="K5">5</div>
+        <div class="btn seat gold1" id="K6">6</div>
+        <div class="btn seat gold1" id="K7">7</div>
+        <div class="btn seat gold1" id="K8">8</div>
+        <div class="btn seat gold1" id="K9">9</div>
+        <div class="btn seat gold1" id="K10">10</div>
+        <div class="btn seat gold1" id="K11">11</div>
+        <div class="btn seat gold1" id="K12">12</div>
+        <div class="btn seat gold1" id="K13">13</div>
+      </div>
+      <div class="platinum" title="PLATINUM">
+        <div class="btn seat platinum1" id="K14">14</div>
+        <div class="btn seat platinum1" id="K15">15</div>
+        <div class="btn seat platinum1" id="K16">16</div>
+      </div>
+    </div>
+    <div class="row1">
+      <p class="rownumber">L</p>
+      <div class="platinum" title="PLATINUM">
+        <div class="btn seat platinum1" id="L1">1</div>
+        <div class="btn seat platinum1" id="L2">2</div>
+        <div class="btn seat platinum1" id="L3">3</div>
+      </div>
+      <div class="gold" title="GOLD">
+        <div class="btn seat gold1" id="L4">4</div>
+        <div class="btn seat gold1" id="L5">5</div>
+        <div class="btn seat gold1" id="L6">6</div>
+        <div class="btn seat gold1" id="L7">7</div>
+        <div class="btn seat gold1" id="L8">8</div>
+        <div class="btn seat gold1" id="L9">9</div>
+        <div class="btn seat gold1" id="L10">10</div>
+        <div class="btn seat gold1" id="L11">11</div>
+        <div class="btn seat gold1" id="L12">12</div>
+        <div class="btn seat gold1" id="L13">13</div>
+      </div>
+      <div class="platinum" title="PLATINUM">
+        <div class="btn seat platinum1" id="L14">14</div>
+        <div class="btn seat platinum1" id="L15">15</div>
+        <div class="btn seat platinum1" id="L16">16</div>
+      </div>
+    </div>
+    <div class="row1">
+      <p class="rownumber">M</p>
+      <div class="platinum" title="PLATINUM">
+        <div class="btn seat platinum1" id="M1">1</div>
+        <div class="btn seat platinum1" id="M2">2</div>
+        <div class="btn seat platinum1" id="M3">3</div>
+        <div class="btn seat platinum1" id="M4">4</div>
+        <div class="btn seat platinum1" id="M5">5</div>
+        <div class="btn seat platinum1" id="M6">6</div>
+        <div class="btn seat platinum1" id="M7">7</div>
+        <div class="btn seat platinum1" id="M8">8</div>
+        <div class="btn seat platinum1" id="M9">9</div>
+        <div class="btn seat platinum1" id="M10">10</div>
+        <div class="btn seat platinum1" id="M11">11</div>
+        <div class="btn seat platinum1" id="M12">12</div>
+        <div class="btn seat platinum1" id="M13">13</div>
+        <div class="btn seat platinum1" id="M14">14</div>
+        <div class="btn seat platinum1" id="M15">15</div>
+        <div class="btn seat platinum1" id="M16">16</div>
+        <div class="btn seat platinum1" id="M17">17</div>
+        <div class="btn seat platinum1" id="M18">18</div>
+        <div class="btn seat platinum1" id="M19">19</div>
+        <div class="btn seat platinum1" id="M20">20</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <table class="tabel" >
+      <tr>
+        <td><h4>Seat Choices:</h4></td>
+        <td><h4 class=" InfoSelectedSeats">Seat Choices</h4></td>
+      </tr>
+      <tr>
+        <td><h4>Price:</h4></td>
+        <td><h4 class="InfoPrice">Price</h4></td>
+      </tr>
+      <tr>
+        <td><h4>Tax:</h4></td>
+        <td><h4 class=" InfoTax">Tax</h4></td>
+      </tr>
+      <tr>
+        <td><h4>Total:</h4></td>
+        <td><h4 class=" InfoTotal">Total</h4></td>
+      </tr>
+    </table>
+    <button class="btn btn-success" id="ProceedToPayment"type="button" name="button" href="/payment">Proceed to Payment<i id="rightarrow" class="fa fa-chevron-right"></i></button>
+  </div>
+</div>

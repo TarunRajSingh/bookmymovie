@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <ul class="nav nav-pills">
+      <li ng-repeat="date in selectdatetheatretimeCtrl.MovieDates" ng-click="selectdatetheatretimeCtrl.ShowByDate(date);"><a href="#" id="details"><span class="glyphicon glyphicon-calendar"></span>{{date | date:'dd MMM yy'}}</a></li>
+    </ul>
+  </div>
+  <br/><br/>
+  <table class="table table-default">
+    <tr ng-repeat="x in selectdatetheatretimeCtrl.RequireMovie" stlye="height:100px">
+      <!-- <td style="width:400px"><span class="glyphicon glyphicon-film" style="color:#357ebd; font-size:18px"></span>&nbsp; {{x.TheatreToMap}}</td> -->
+      <td>{{x.TheatreToMap}}</td>
+      <td ng-repeat="s in x.ShowTimings" ng-click="selectdatetheatretimeCtrl.SelectTimeAndProceed(x.TheatreToMap,s);"><a href="#">{{s}}</a></td>
+      <br>
+    </tr>
+  </table>
+</div>

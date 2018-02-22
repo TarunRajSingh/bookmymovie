@@ -1,0 +1,221 @@
+<script type="text/javascript">
+	$('#carousel-339761').carousel({
+		interval:3000,
+		cycle:true
+	});
+</script>
+<div class="container-fluid">
+	<div class="row">
+		<div class="row">
+			<div class="carousel slide" id="carousel-339761">
+				<ol class="carousel-indicators">
+					<li class="active" data-slide-to="0" data-target="#carousel-339761">
+					</li>
+					<li data-slide-to="1" data-target="#carousel-339761">
+					</li>
+					<li data-slide-to="2" data-target="#carousel-339761">
+					</li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item active">
+						<img alt="Carousel Bootstrap First" src="assets\images\1.jpg" style="height:450px;width:100%"/>
+					</div>
+					<div class="item">
+						<img alt="Carousel Bootstrap Second" src="assets\images\2.jpg" style="height:450px;width:100%"/>
+					</div>
+					<div class="item">
+						<img alt="Carousel Bootstrap Third" src="assets\images\3.jpg" style="height:450px;width:100%"/>
+					</div>
+				</div> <a class="left carousel-control" href="#carousel-339761" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-339761" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+		</div>
+	</div>
+  <!-- <br></br> -->
+	<!-- <div class="row QuickBook" style="background:red;height:40px">
+		<form class="form-inline" action="index.html" method="post">
+			<div class="form-group">
+				<select class="form-control" name="CHOOSE YOUR MOVIE" ng-model="MovieNameInSelectMenu">
+					<option value="" ng-repeat="x in $ctrl.movies|unique:'MovieToMap'">{{x.MovieToMap}}</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<select class="form-control" name="CHOOSE YOUR City" ng-model="CityNameInSelectMenu">
+					<option value="" ng-repeat="x in $ctrl.movies|unique:'CityToMap'">{{x.CityToMap}}</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<select class="form-control" name="CHOOSE YOUR Theatre" ng-model="TheatreNameInSelectMenu">
+					<option value="" ng-repeat="x in $ctrl.movies|filter:CityNameInSelectMenu">{{x.TheatreToMap}}</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<select class="form-control" name="CHOOSE YOUR Date" ng-model="DateInSelectMenu" ng-repeat="x in $ctrl.movies|filter:DateInSelectMenu|unique:'DateToMap'">
+					<option value="" ng-repeat="y in x.DateToMap" >{{y}}</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<select class="form-control" name="CHOOSE YOUR Date" ng-model="DateInSelectMenu" ng-repeat="x in $ctrl.movies|filter:DateInSelectMenu|unique:'ShowTimings'">
+					<option value="" ng-repeat="y in x.ShowTimings" >{{y}}</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<select class="form-control" name="Choose Your Seats" ng-model="SeatInSelectMenu">SEATS
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<button type="button" class="btn btn-warning" name="button">BOOK NOW</button>
+			</div>
+		</form>
+	</div> -->
+	<br></br>
+		<div class="col-md-3">
+			<br></br>
+			<div class="col-sm-12">
+				<form class="form-group" action="index.html" method="post">
+					<label>SEARCH YOUR MOVIE HERE</label>
+					<input class="form-control input-box" ng-model="$ctrl.SearchByMovieName" placeholder="TYPE YOUR MOVIE HERE" ></input>
+				</form>
+			</div>
+
+			<!-- <div class="col-sm-12">
+				<div class="form-group">
+					<select class="form-control" name="CHOOSE YOUR MOVIE" ng-model="$ctrl.MovieNameInSelectMenu">
+						<option value="">SELECT MOVIE</option>
+						<option value="" ng-repeat="x in $ctrl.movies|unique:'MovieToMap'">{{x.MovieToMap|uppercase}}</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" name="CHOOSE YOUR City">
+						<option value="">SELECT CITY</option>
+						<option value="" ng-repeat="x in $ctrl.movies|filter:{'MovieToMap': $ctrl.MovieNameInSelectMenu} |unique:'CityToMap'">{{x.CityToMap|uppercase}}</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" name="CHOOSE YOUR Theatre" ng-model="TheatreNameInSelectMenu">
+						<option value="">SELECT THEATRE</option>
+						<option value="" ng-repeat="x in $ctrl.movies|filter:CityNameInSelectMenu">{{x.TheatreToMap|uppercase}}</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<select class="form-control" name="CHOOSE YOUR Date" ng-model="DateInSelectMenu" ng-repeat="x in $ctrl.movies|filter:DateInSelectMenu|unique:'DateToMap'">
+						<option value="">SELECT DATE</option>
+						<option value="" ng-repeat="x in $ctrl.movies" >{{x.DateToMap}}</option>
+					</select>
+				</div>
+			</div> -->
+			<!-- <div class="col-sm-12">
+				<form class="form-group" action="index.html" method="post">
+					<label class="headings" >GENRE</label>
+					<div style="border:1px solid transparent">
+						<h5 class="genre" >ACTION</h5>
+					</div>
+					<div style="border:1px solid transparent">
+						<h5 class="genre">COMEDY</h5>
+					</div>
+					<div style="border:1px solid transparent">
+						<h5 class="genre">DRAMA</h5>
+					</div>
+					<div style="border:1px solid transparent">
+						<h5 class="genre">THRILLER</h5>
+					</div>
+					<div style="border:1px solid transparent">
+						<h5 class="genre">WAR</h5>
+					</div>
+				</form>
+				<form class="form-group" action="index.html" method="post">
+					<label class="headings">DURATION (MAXIMUM)</label>
+					<div style="border:1px solid transparent">
+						<h5 class="duration" >100 MINUTES</h5>
+					</div>
+					<div style="border:1px solid transparent">
+						<h5 class="duration" >120 MINUTES</h5>
+					</div>
+					<div style="border:1px solid transparent">
+						<h5 class="duration" >140 MINUTES</h5>
+					</div>
+					<div style="border:1px solid transparent">
+						<h5 class="duration" >160 MINUTES</h5>
+					</div>
+					<div style="border:1px solid transparent">
+						<h5 class="duration" >180 MINUTES</h5>
+					</div>
+					<div style="border:1px solid transparent">
+						<h5 class="duration" >200 MINUTES</h5>
+					</div>
+				</form>
+			</div> -->
+		</div>
+		<div class="col-sm-9">
+			<h3 style="text-align:center">NOW SHOWING</h3>
+				<div class="col-sm-3 image-item-content" id="image-item-content" ng-repeat="x in $ctrl.movies|filter:$ctrl.SearchByMovieName|unique:'MovieToMap'" ng-show="$ctrl.Durrr">
+          <img src="{{x.PosterToMap}}" alt="Movie Image" class="containerforimage" id="containerforimage">
+          <button class="item-book btn btn-default btn-block" id="BookNow" ng-click="$ctrl.BookNow(x)" data-toggle="modal" data-target="#myModal">
+							<div >
+	            	<strong>{{x.MovieToMap}}</strong>
+	            </div>
+							<div style="background:">
+								<strong>Book Now</strong>
+							</div>
+          </button>
+				</div>
+		</div>
+
+
+
+<!-- modal.......modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+								<button type="button" class="btn btn-danger pull-right" data-dismiss="modal">CLOSE</button>
+								<br></br>
+                <div class="form-group">
+                  <select class="form-control" id="CityName">
+                    <option>Choose Your City</option>
+    								<option ng-repeat="x in $ctrl.movies|unique:'CityToMap'">{{x.CityToMap}}</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <div style="padding-top:15px;text-align:center; background-color:#F5F5F5; color:'black'; height:50px; font-weight: bold; ">HOW MANY TICKETS ?</div><br/>
+    							<div>
+    								<nav class="navbar navbar-default" style="max-width:76%; margin-left:80px">
+    									  <div class="container-fluid">
+    									    <ul id="vehicleselcetion" class="nav navbar-nav">
+    									      <li id="v1"><a href="#">1</a></li>
+                            <li id="v2"><a href="#">2</a></li>
+    									      <li id="v3"><a href="#">3</a></li>
+                            <li id="v4"><a href="#">4</a></li>
+    									      <li id="v5"><a href="#">5</a></li>
+                            <li id="v6"><a href="#">6</a></li>
+    												<li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+    												<li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+    									    </ul>
+    									  </div>
+    								</nav>
+    							</div>
+    							<div style="text-align:center">
+    								<img id="vehicle" src="assets/Images/bicycle.png" width="100px"/>
+    							</div>
+                </div>
+								<button id="modalProceedButton" type="button" class="btn btn-success col-sm-offset-5">PROCEED</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+  </div>
+</div>

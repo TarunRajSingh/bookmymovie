@@ -1,0 +1,118 @@
+.written{
+  font-family: sans-serif;
+  font-size: 15px;
+}
+.seat
+{
+  height:25px;
+  width:25px;
+  text-align:center;
+  border: 2px solid #6666ff;
+  padding:0px;
+  border-bottom-left-radius:30%;
+  border-bottom-right-radius:30%;
+  border-top-left-radius:0%;
+  border-top-right-radius:0%;
+  margin:0px;
+}
+.rownumber,
+.silver,
+.gold,
+.platinum,
+.goldfront,
+.seat{
+  display:inline-block;
+}
+.row1{
+  height: 30px;
+}
+.silver{
+  padding-left: 22.5%;
+}
+.silver1[title]:hover:after{
+
+}
+.platinum{
+  padding-left: 6.5%;
+}
+.gold{
+  padding-left: 6.5%;
+}
+.goldfront{
+padding-left: 22.5%;
+}
+.fa-chevron-down{
+  transition: all 0.25s ease;
+}
+.fa-chevron-down-transform{
+transform: rotate(180deg);
+}
+
+.seatselected{
+  height:25px;
+  width:25px;
+  text-align:center;
+  border: 2px solid black;
+  padding:0px;
+  border-bottom-left-radius:30%;
+  border-bottom-right-radius:30%;
+  border-top-left-radius:0%;
+  border-top-right-radius:0%;
+  margin:0px;
+  color:white;
+  background: black;
+
+}
+#ProceedToPaymentButton{
+  margin-top: 10px;
+  border-radius: 0px;
+}
+#rightarrow{
+  display: inline;
+  padding-left: 0px;
+}
+#option2{
+  position: relative;
+
+}
+.abcde{
+  position: relative;
+  display:inline-flex;
+  width: 80px;
+}
+.seatselection{
+  position: relative;
+  display: inline-flex;
+}
+.seatsoption{
+  position: relative;
+  display: inline-flex;
+}
+.seatsoptionafter{
+  position: relative;
+  display: inline-flex;
+}
+.seatsoptioninner{
+  position: relative;
+  display: inline-flex;
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.seatselection,
+.seatsoptioninner{
+  position: relative;
+  font-size: 30px;
+  border: 1px solid black;
+}
+.seatsoptioninner:hover{
+  position: relative;
+  background: red;
+  transition: 1.2s;
+}
+.btnforselection{
+  position: relative;
+  border-radius: 0px;
+}

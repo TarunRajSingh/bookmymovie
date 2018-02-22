@@ -1,0 +1,88 @@
+<div class="container">
+  <table class="table">
+    <tr>
+      <td>Choose Movie</td>
+      <td>Choose Location</td>
+    </tr>
+    <tr>
+      <td>
+        <select class="form-control" name="MovieName" ng-model="editmoviemappingCtrl.Title" id="MovieName" ng-disabled="editmoviemappingCtrl.MovieNameActive">
+          <option ng-repeat="x in editmoviemappingCtrl.MappedMovie|unique:'MovieToMap'">{{x.MovieToMap}}</option>
+        </select>
+      </td>
+      <td>
+        <select class="form-control" name="State" ng-model="editmoviemappingCtrl.City" ng-disabled="editmoviemappingCtrl.StateNameActive">
+          <option ng-repeat="x in editmoviemappingCtrl.MappedMovie|orderBy:'CityToMap'|unique:'CityToMap'">{{x.CityToMap}}</option>
+        </select>
+      </td>
+      <td>
+        <button class="btn btn-warning" type="button" name="singlemapping" ng-click="editmoviemappingCtrl.StartEditMapping()">Edit This Movie</button>
+      </td>
+    </tr>
+  </table>
+
+  <div class="TheatrePills" ng-show="editmoviemappingCtrl.SelectTheatreActive">
+    <h3>Select Theatre</h3>
+    <ul id="ChooseTheatre" class="nav nav-pills nav-justified TheatrePills">
+      <li class="active" ng-repeat="x in editmoviemappingCtrl.MappedTheatre"><a href="#">{{x}}</a></li>
+      <li class="TheatrePills" ng-repeat="x in editmoviemappingCtrl.UnMappedTheatre"><a href="#">{{x}}</a></li>
+    </ul>
+  </div>
+
+  <div id="ChooseDate" class="DatePills" ng-show="editmoviemappingCtrl.SelectDateActive">
+    <h3>Select Dates</h3>
+    <ul  id="ChooseDate" class="nav nav-pills DatePills nav-justified">
+      <li class="active" ng-repeat="x in editmoviemappingCtrl.MappedDate"><a href="#">{{x}}</a></li>
+      <li class="DatePills" ng-repeat="date in editmoviemappingCtrl.UnMappedDate"><a href="#">{{date | date:'dd MMM yy'}}</a></li>
+    </ul>
+  </div>
+<br/>
+
+  <div class="TimeSelectionMenu form-horizontal" ng-show="editmoviemappingCtrl.SelectTimeActive">
+    <h3>Select Time</h3>
+
+    <div class="form-group">
+
+      <div class="col-sm-2">
+        <select class="form-control" id="Hours">
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+
+      <div class="col-sm-2" id="Mins">
+        <select class="form-control" name="">
+          <option value="00">00</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+        </select>
+      </div>
+
+      <div class="col-sm-2" id="AMPM">
+        <select class="form-control">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+      </div>
+
+      <button class="btn btn-success" ng-click="editmoviemappingCtrl.AddTime()">Add Time <span class="glyphicon glyphicon-chevron-right"></span></button>
+      <br></br>
+      <div id="TimeSelectionMenuContent" class="nav navbar-nav col-sm-12" style="padding-left:16px;"></div>
+    </div>
+    <button class="btn btn-success col-sm-6 col-sm-offset-3" ng-click="editmoviemappingCtrl.SaveEditInfo()">Edit This Information <i class="glyphicon glyphicon-save"></i></button>
+  </div>
+
+</div>
